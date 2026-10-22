@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10111b">
+<title>Movie Recap — AI Video Studio</title>
+<style>
+:root{color-scheme:dark;--bg:#10111b;--panel:#191b29;--panel2:#202337;--line:#303449;--text:#f5f4ff;--muted:#a5a8c2;--purple:#9b7bff;--cyan:#65e6d3;--pink:#f18bc8}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#30245a 0,transparent 38%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Myanmar",sans-serif}
+button,input,select{font:inherit}button{cursor:pointer;border:0}.wrap{max-width:780px;margin:auto;padding:18px 15px 42px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:11px}.logo{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--purple),#5a49bc);font-size:23px;box-shadow:0 8px 24px #8b6dff33}.brand h1{font-size:19px;margin:0;letter-spacing:.2px}.brand p{font-size:12px;color:var(--muted);margin:3px 0 0}.status{font-size:11px;color:var(--cyan);border:1px solid #65e6d344;padding:7px 10px;border-radius:30px;white-space:nowrap}.hero{padding:22px 19px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#22243a,#171925 68%);position:relative;overflow:hidden}.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:1.8px}.hero h2{font-size:29px;line-height:1.25;margin:12px 0 9px}.hero h2 span{color:var(--purple)}.hero p{color:var(--muted);font-size:14px;line-height:1.7;margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:22px}.step{background:#ffffff08;border:1px solid #ffffff0c;border-radius:14px;padding:12px 9px}.step b{display:block;font-size:12px;margin-top:7px}.step small{display:block;color:var(--muted);font-size:10px;margin-top:4px;line-height:1.5}.num{width:27px;height:27px;display:grid;place-items:center;border-radius:9px;background:#9b7bff22;color:#c8b9ff;font-weight:800;font-size:12px}.section{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:18px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.section-title h3{font-size:17px;margin:0}.tag{font-size:10px;color:var(--muted);background:#ffffff0a;border:1px solid var(--line);padding:5px 8px;border-radius:20px}.drop{border:1.5px dashed #5d5a7d;border-radius:18px;padding:23px 14px;text-align:center;background:#ffffff04;display:block}.drop .symbol{font-size:34px}.drop strong{display:block;margin:9px 0 5px}.drop p{color:var(--muted);font-size:12px;margin:0;line-height:1.6}.primary{width:100%;margin-top:14px;border-radius:14px;padding:14px 16px;background:linear-gradient(100deg,#9474ff,#b17bff);color:white;font-weight:800;box-shadow:0 8px 22px #9474ff20}.primary:disabled{opacity:.45;cursor:not-allowed}.secondary{background:#ffffff0a;border:1px solid var(--line);border-radius:12px;color:var(--text);padding:9px 12px;font-size:12px}.fileinfo{display:none;margin-top:12px;padding:11px;border-radius:12px;background:#65e6d311;color:var(--cyan);font-size:12px;overflow-wrap:anywhere}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}.field select{width:100%;padding:12px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;color:var(--text)}.checkrow{display:flex;align-items:flex-start;gap:10px;margin-top:14px;color:#d7d8e9;font-size:13px;line-height:1.6}.checkrow input{accent-color:var(--purple);width:17px;height:17px;margin-top:3px}.notice{margin-top:14px;border-radius:13px;padding:12px;background:#f0b35b12;border:1px solid #f0b35b30;color:#e7c995;font-size:12px;line-height:1.65}.statusbox{display:flex;align-items:flex-start;gap:11px;padding:14px;background:#ffffff05;border:1px solid var(--line);border-radius:14px}.dot{width:9px;height:9px;border-radius:50%;background:#f0b35b;margin-top:5px;flex:none}.statusbox b{font-size:13px}.statusbox p{font-size:12px;color:var(--muted);line-height:1.6;margin:4px 0 0}.history-empty{text-align:center;color:var(--muted);font-size:12px;padding:18px 5px}.history-item{display:flex;justify-content:space-between;gap:10px;align-items:center;border-top:1px solid var(--line);padding:12px 0;font-size:12px}.history-item span{overflow-wrap:anywhere}.footer{text-align:center;color:#777b98;font-size:11px;line-height:1.7;padding:22px 10px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);max-width:90%;background:#282b40;border:1px solid #454965;padding:11px 15px;border-radius:12px;font-size:12px;display:none;z-index:5}.preview{display:none;margin-top:13px;width:100%;max-height:300px;border-radius:13px;background:#000}.hidden{display:none!important}
+@media(max-width:430px){.hero h2{font-size:25px}.steps{gap:6px}.step{padding:10px 7px}.step b{font-size:11px}.section{padding:15px}.options{gap:9px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><div class="logo">🎬</div><div><h1>Movie Recap</h1><p>AI Video Studio · Myanmar</p></div></div>
+  <div class="status">● DEMO MODE</div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">YOUR VIDEO · YOUR LANGUAGE</div>
+  <h2>English Video ကို<br><span>မြန်မာလို ပြောင်းမယ်</span></h2>
+  <p>ဗီဒီယိုတင်ပါ၊ မြန်မာအသံနဲ့ စာတန်းထိုးအတွက် ပြင်ဆင်ပါ။ AI Processing Server မချိတ်ရသေးတဲ့ အစမ်းဗားရှင်းဖြစ်ပါတယ်။</p>
+  <div class="steps">
+    <div class="step"><div class="num">01</div><b>Upload</b><small>ဗီဒီယိုဖိုင်ရွေးမယ်</small></div>
+    <div class="step"><div class="num">02</div><b>Translate</b><small>ဘာသာပြန် / အသံ / စာတန်း</small></div>
+    <div class="step"><div class="num">03</div><b>Export</b><small>MP4 ထုတ်ယူမယ်</small></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title"><h3>📁 Video Upload</h3><span class="tag">STEP 1</span></div>
+  <label class="drop" for="videoFile">
+    <div class="symbol">☁️</div><strong>ဗီဒီယိုဖိုင်ကို ရွေးချယ်ပါ</strong>
+    <p>MP4, MOV, WebM · သင့်ဖုန်းထဲက ဖိုင်ကို ရွေးနိုင်ပါတယ်</p>
+    <div style="margin-top:13px"><span class="secondary">ဖိုင်ရွေးရန်</span></div>
+  </label>
+  <input id="videoFile" type="file" accept="video/*" class="hidden">
+  <div class="fileinfo" id="fileInfo"></div>
+  <video id="preview" class="preview" controls playsinline></video>
+  <div class="notice">🔒 ဒီ Demo မှာ ဖိုင်ကို Server သို့ မတင်ပို့ပါ။ ဖုန်းထဲမှာပဲ Preview ပြပေးပါတယ်။</div>
+</section>
+
+<section class="section">
+  <div class="section-title"><h3>⚙️ Processing Settings</h3><span class="tag">STEP 2</span></div>
+  <div class="options">
+    <div class="field"><label for="sourceLang">မူရင်းဘာသာစကား</label><select id="sourceLang"><option>English</option><option>Auto detect (နောက်ပိုင်း)</option></select></div>
+    <div class="field"><label for="targetLang">ထုတ်ပေးမည့်ဘာသာ</label><select id="targetLang"><option>မြန်မာ (Burmese)</option></select></div>
+    <div class="field"><label for="voice">အသံပုံစံ</label><select id="voice"><option>မြန်မာအသံ (API ချိတ်ရန်လို)</option><option>အမျိုးသားအသံ (နောက်ပိုင်း)</option><option>အမျိုးသမီးအသံ (နောက်ပိုင်း)</option></select></div>
+    <div class="field"><label for="quality">Output</label><select id="quality"><option>MP4 · 720p (နောက်ပိုင်း)</option><option>MP4 · 1080p (နောက်ပိုင်း)</option></select></div>
+  </div>
+  <label class="checkrow"><input id="subtitles" type="checkbox" checked><span>မြန်မာစာတန်းထိုး ထည့်ရန်</span></label>
+  <label class="checkrow"><input id="replaceVoice" type="checkbox" checked><span>မူရင်းအင်္ဂလိပ်အသံအစား မြန်မာအသံ အသုံးပြုရန်</span></label>
+  <button class="primary" id="startBtn" disabled>▶ Processing စတင်ရန်</button>
+  <div class="notice">⚠️ လက်ရှိအချိန်တွင် AI API နဲ့ Render Server မချိတ်ဆက်ရသေးပါ။ ဒီခလုတ်က Demo အခြေအနေကိုသာ ပြသပြီး ဗီဒီယိုကို အမှန်တကယ် ဘာသာပြန်ခြင်း၊ အသံပြောင်းခြင်း သို့မဟုတ် MP4 ထုတ်ခြင်း မလုပ်ပါ။</div>
+</section>
+
+<section class="section">
+  <div class="section-title"><h3>📡 Job Status</h3><span class="tag">STATUS</span></div>
+  <div class="statusbox"><div class="dot"></div><div><b id="statusTitle">စောင့်ဆိုင်းနေသည်</b><p id="statusText">ဗီဒီယိုဖိုင်ရွေးပြီးနောက် Demo ကို စမ်းကြည့်နိုင်ပါတယ်။ အမှန်တကယ် Cloud Render အတွက် Backend လိုအပ်ပါတယ်။</p></div></div>
+</section>
+
+<section class="section">
+  <div class="section-title"><h3>🕘 History</h3><button class="secondary" id="clearHistory">History ရှင်းရန်</button></div>
+  <div id="history" class="history-empty">ဒီ Session အတွင်း စမ်းသပ်မှု မရှိသေးပါ။</div>
+</section>
+
+<div class="footer">Movie Recap · Prototype v0.1<br>AI service မချိတ်ရသေးသော အစမ်းဗားရှင်း။ API Key ကို Website code ထဲ တိုက်ရိုက်မထည့်ပါနှင့်။</div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const fileInput=document.getElementById('videoFile');
+const fileInfo=document.getElementById('fileInfo');
+const preview=document.getElementById('preview');
+const startBtn=document.getElementById('startBtn');
+const statusTitle=document.getElementById('statusTitle');
+const statusText=document.getElementById('statusText');
+const historyEl=document.getElementById('history');
+const toastEl=document.getElementById('toast');
+let currentUrl=null;let jobs=[];
+function toast(message){toastEl.textContent=message;toastEl.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>toastEl.style.display='none',2800)}
+function sizeText(bytes){if(bytes<1024*1024)return (bytes/1024).toFixed(0)+' KB';return (bytes/1024/1024).toFixed(2)+' MB'}
+fileInput.addEventListener('change',()=>{
+ const file=fileInput.files&&fileInput.files[0];if(!file)return;
+ if(!file.type.startsWith('video/')){toast('ဗီဒီယိုဖိုင်ကိုသာ ရွေးပေးပါ။');fileInput.value='';return}
+ if(currentUrl)URL.revokeObjectURL(currentUrl);
+ currentUrl=URL.createObjectURL(file);preview.src=currentUrl;preview.style.display='block';
+ fileInfo.style.display='block';fileInfo.textContent='ရွေးထားသောဖိုင်: '+file.name+' · '+sizeText(file.size);
+ startBtn.disabled=false;statusTitle.textContent='ဖိုင်ရွေးချယ်ပြီး';statusText.textContent='ဖိုင်ကို ဖုန်းထဲမှာ Preview ကြည့်နိုင်ပါတယ်။ AI Processing မစတင်ရသေးပါ။';
+});
+startBtn.addEventListener('click',()=>{
+ const file=fileInput.files&&fileInput.files[0];if(!file){toast('အရင်ဆုံး ဗီဒီယိုဖိုင် ရွေးပါ။');return}
+ statusTitle.textContent='Demo သာဖြစ်သည် — Server မချိတ်ရသေးပါ';statusText.textContent='ဒီ Website မှာ Backend/API မရှိသေးလို့ ဗီဒီယိုကို မပြောင်းလဲပါ။ နောက်တစ်ဆင့်မှာ လုံခြုံတဲ့ Backend နဲ့ AI service ချိတ်ဆက်ရပါမယ်။';
+ const job={name:file.name,time:new Date().toLocaleString(),status:'Demo — မလုပ်ဆောင်ရသေး'};jobs.unshift(job);renderHistory();toast('Demo ဖြစ်ကြောင်း ပြထားပါတယ်။ ဗီဒီယိုကို မပြောင်းထားပါ။');
+});
+function renderHistory(){if(!jobs.length){historyEl.className='history-empty';historyEl.textContent='ဒီ Session အတွင်း စမ်းသပ်မှု မရှိသေးပါ။';return}historyEl.className='';historyEl.innerHTML='';jobs.forEach(j=>{const row=document.createElement('div');row.className='history-item';const name=document.createElement('span');name.textContent='🎞️ '+j.name+'<br><small style="color:#a5a8c2">'+j.time+' · '+j.status+'</small>';const copy=document.createElement('button');copy.className='secondary';copy.textContent='Copy';copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(j.name+' — '+j.status);toast('History စာသားကို Copy လုပ်ပြီးပါပြီ။')}catch(e){toast('Copy မရပါ။ ဖိုင်အမည်ကို ကိုယ်တိုင်ရွေးကူးပါ။')}});row.append(name,copy);historyEl.appendChild(row)})}
+document.getElementById('clearHistory').addEventListener('click',()=>{jobs=[];renderHistory();toast('ဒီ Session ရဲ့ History ကို ရှင်းလိုက်ပါပြီ။')});
+</script>
+</body>
+</html>
